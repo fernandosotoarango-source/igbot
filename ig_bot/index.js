@@ -23,9 +23,24 @@ const url = require('url');
 
 // Read configuration from environment variables. Replace these values
 // with your actual credentials or set environment variables accordingly.
-const VERIFY_TOKEN = process.env.VERIFY_TOKEN || '7674028595838117';
-const IG_ID = process.env.IG_ID || '7674028595838117';
-const ACCESS_TOKEN = process.env.ACCESS_TOKEN || 'IGAAK58ubYVo1BZAFB4UzRyMGprd19pRWF4Y0w5aThHVXJERnYweFR1aG9mTDFHRzJRWXBpVkpJM1pudVpmbUE3NDNRa2tGVkYyWTF5anlkV2N2U2NyRldkTzUzSzV2MnI5aDd6enFMREw4VWJPN2pjcDFfMFgyTGlOU0h2ZA25FawZDZD';
+//
+// In this deployment we hard‑code the values for the verification token,
+// Instagram Business Account ID and long‑lived access token because the user
+// provided them during the setup. These constants must match the values
+// configured in the Meta developer console and Cloud Run environment:
+//
+//  - VERIFY_TOKEN: This must be the same string you entered in the
+//    “Identificador de verificación” field when configuring the webhook in
+//    Meta. We are using the application ID here because the user selected
+//    it as their verification token during deployment.
+//  - IG_ID: The numeric ID of your Instagram professional account. You can
+//    find this on the API setup page under “Cuenta de Instagram”.
+//  - ACCESS_TOKEN: The long‑lived access token generated from the “Generar
+//    identificador” dialog. This token must have the `instagram_manage_messages`
+//    permission and will be used to send messages back to Instagram users.
+const VERIFY_TOKEN = '7674028595838117';
+const IG_ID = '17841464542107646';
+const ACCESS_TOKEN = 'IGAAK58ubYVo1BZAFB4UzRyMGprd19pRWF4Y0w5aThHVXJERnYweFR1aG9mTDFHRzJRWXBpVkpJM1pudVpmbUE3NDNRa2tGVkYyWTF5anlkV2N2U2NyRldkTzUzSzV2MnI5aDd6enFMREw4VWJPN2pjcDFfMFgyTGlOU0h2ZA25FawZDZD';
 
 // In‑memory store for conversation history. You can replace this with a
 // persistent data store such as a database if required.
