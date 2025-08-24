@@ -23,9 +23,9 @@ const url = require('url');
 
 // Read configuration from environment variables. Replace these values
 // with your actual credentials or set environment variables accordingly.
-const VERIFY_TOKEN = process.env.VERIFY_TOKEN || 'YOUR_VERIFY_TOKEN';
-const IG_ID = process.env.IG_ID || 'YOUR_IG_ID';
-const ACCESS_TOKEN = process.env.ACCESS_TOKEN || 'YOUR_INSTAGRAM_USER_ACCESS_TOKEN';
+const VERIFY_TOKEN = process.env.VERIFY_TOKEN || '7674028595838117';
+const IG_ID = process.env.IG_ID || '7674028595838117';
+const ACCESS_TOKEN = process.env.ACCESS_TOKEN || 'IGAAK58ubYVo1BZAFB4UzRyMGprd19pRWF4Y0w5aThHVXJERnYweFR1aG9mTDFHRzJRWXBpVkpJM1pudVpmbUE3NDNRa2tGVkYyWTF5anlkV2N2U2NyRldkTzUzSzV2MnI5aDd6enFMREw4VWJPN2pjcDFfMFgyTGlOU0h2ZA25FawZDZD';
 
 // In‑memory store for conversation history. You can replace this with a
 // persistent data store such as a database if required.
